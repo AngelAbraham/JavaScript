@@ -48,5 +48,6 @@ c='Hola de nuevo';
 
 console.log(miNuevoNombre);
 
+//Importancia de let por que var manda un error directo
 //var miNuevoNombre= 'Angel Abraham';
 let miNuevoNombre= 'Angel Abraham';
