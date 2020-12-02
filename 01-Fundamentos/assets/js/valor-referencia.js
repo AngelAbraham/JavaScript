@@ -1,17 +1,19 @@
-let a = 10;
-let b = a;
+
+let a =10;
+let b =a;
 a = 30;
 
-console.log({ a, b });
+console.log({a,b});
+
+let juan= { nombre: 'Juan'};
+//Operador spread cuando lo utilizamo para un objeto
+let ana = { ...juan };
+ana.nombre='Ana';
+
+console.log ({juan , ana});
 
 
-let juan = { nombre: 'Juan' };
-let ana  = { ...juan };
-ana.nombre = 'Ana';
-
-console.log({ juan, ana });
-
-
+//Operador Rest cuando lo establecemos en una funsion de argumentos ( { ...persona } )
 const cambiaNombre = ( { ...persona } ) =>{
    persona.nombre= 'Tony';
     return persona;
@@ -20,4 +22,23 @@ const cambiaNombre = ( { ...persona } ) =>{
 let peter = {nombre: 'Peter'};
 let tony = cambiaNombre (peter);
 
-console.log( { peter , tony } );
+console.log({ peter , tony } );
+
+//Arreglos
+
+const frutas= ['Manzana','Pera','Piña'];
+
+// const otrasFrutas = [...frutas];
+
+console.time('slice');
+const otrasFrutas = frutas.slice();
+console.timeEnd('slice');
+
+console.time('spread');
+const otrasFrutas2 = [...frutas];
+console.timeEnd('spread');
+
+
+otrasFrutas.push('Mango');
+
+console.table({frutas,otrasFrutas})
