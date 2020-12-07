@@ -1,4 +1,11 @@
-/**
+
+
+// (function({}))();
+
+
+(()=>{
+    'use strict'
+    /**
  * 2c= two of clubs treboles
  * 2d= diamonds
  * 2h= heards
@@ -6,7 +13,6 @@
  */
 
 let deck= [];
-
 const tipos = ['C','D','H','S'];
 const especiales= ['A','J','Q','K'];
 
@@ -193,3 +199,4 @@ btnNuevo.addEventListener('click', ()=> {
 //TODO: borrar
 
 // turnoComputadora(21);
+})();
