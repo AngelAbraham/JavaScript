@@ -17,4 +17,14 @@ module.exports = {
                 options:{
                     attributes:false,
                 },
-         
+            }
+        ]
+    },
+    plugins:[
+        new HtmlWebPackPlugin({
+            template: './src/index.html',
+            filename: './index.html'
+
+        }),
+    ]
+}
