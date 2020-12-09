@@ -1,5 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-
+const MiniCssExtrackPlugin = require('mini-css-extract-plugin');
 module.exports = {
     mode:'development',
     module:{
@@ -8,6 +8,13 @@ module.exports = {
                 test: /\.css$/,
                 use:[
                     'style-loader',
+                    'css-loader'
+                ]
+            },
+            {
+                test: /styles\.css$/,
+                use:[
+                    MiniCssExtrackPlugin.loader,
                     'css-loader'
                 ]
             },
@@ -26,5 +33,10 @@ module.exports = {
             filename: './index.html'
 
         }),
+
+        new MiniCssExtrackPlugin ({
+            filename:'[name].css',
+            ignoreOrder: false
+        })
     ]
 }
