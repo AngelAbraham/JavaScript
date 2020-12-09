@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const MiniCssExtrackPlugin = require('mini-css-extract-plugin');
-omconst OptimizeCssAssetsPlugin=require('optimize-css-assets-webpack-plugin');
+const OptimizeCssAssetsPlugin=require('optimize-css-assets-webpack-plugin');
 
 module.exports = {
     mode:'development',
