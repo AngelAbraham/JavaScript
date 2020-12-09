@@ -12,6 +12,8 @@
   "author": "Angel Abraham",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^6.4.0",
     "css-loader": "^5.0.1",
     "file-loader": "^6.2.0",
