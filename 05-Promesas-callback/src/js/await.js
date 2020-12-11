@@ -50,3 +50,14 @@ export const heroesCiclo= async()=>{
     // console.log(heroes);
     console.timeEnd('HeoresCiclo');
 }
+
+export const heroeIfAwait = async (id)=>{
+    if ( await buscarHeroeAsync(id).nombre === 'Ironman'){
+
+        console.log('Iroman is the best heroe');
+
+    }else{
+        console.log('Is less very bad');
+
+    }
+}
