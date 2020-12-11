@@ -1,20 +1,6 @@
-import './styles.css';
-import {buscarHeroe,buscarHeroeAsync} from './js/promesas';
+import {} from './js/await';
 
-buscarHeroe('capi')
-.then(heroe =>console.log(heroe))
-.catch(console.warn);
+import{obtenerHeroesArr} from './js/await';
 
-buscarHeroeAsync('iron')
-.then(heroe =>console.log(heroe))
-.catch(console.warn);
+obtenerHeroesArr().then(console.table);
 
-// import {promesaLenta,promesaMedia,promesaRapida} from './js/promesas';
-
-// promesaLenta.then(console.log);
-// promesaMedia.then(console.log);
-// promesaRapida.then(console.log);
-
-// Promise.race([promesaLenta,promesaMedia,promesaRapida])
-// .then(mensaje => console.log(mensaje))
-// .catch(console.warn);
