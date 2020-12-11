@@ -8,3 +8,8 @@
 import * as CRUD from './js/crud-provider';
 
 CRUD.getUsuario(2).then(console.log);
+
+CRUD.crearUsuario({
+    name: 'Abraham',
+    job: 'Carpintero'
+}).then (console.log);
