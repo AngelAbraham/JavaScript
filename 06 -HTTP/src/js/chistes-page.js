@@ -36,9 +36,9 @@ const evento = () =>{
 }
 
 const dibujarChiste= (chiste)=>{
-    let i=1;
+    
     const olItem= document.createElement('li');
-    olItem.innerHTML= `${i++}.-<b> ${chiste.id}</b>: ${chiste.value}`;
+    olItem.innerHTML= `<b> ${chiste.id}</b>: ${chiste.value}`;
 
     olItem.classList.add('list-group-item');
 
