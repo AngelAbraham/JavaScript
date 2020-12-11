@@ -19,7 +19,31 @@ const crearUsuario= async(usuario)=>{
     // console.log( await resp.json());
     return await resp.json();
 }
+
+const actualizarUsuario= async(id,usuario)=>{
+    const resp= await fetch(`${ urlCRUD }/${ id }`,{
+        method:'PUT',
+        body: JSON.stringify(usuario),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    } );
+
+    // console.log( await resp.json());
+    return await resp.json();
+}
+
+const borrarUsuario= async(id)=>{
+    const resp= await fetch(`${ urlCRUD }/${ id }`,{
+       method: 'DELETE' 
+    });
+
+    return (resp.ok)?'Borrador':'No se pudo elimnar';
+}
+
 export{
     getUsuario,
-    crearUsuario
+    crearUsuario,
+    actualizarUsuario,
+    borrarUsuario
 }
